@@ -11,14 +11,7 @@ def load_config(config_path):
         return json.load(f)
 
 def load_products(product_path, sample_size=None, random_seed=42):
-    """
-    Load product data from JSON or JSONL file with option to sample
-    
-    Args:
-        product_path: Path to the JSON or JSONL file
-        sample_size: Number of products to sample (None = all products)
-        random_seed: Random seed for reproducibility
-    """
+
     random.seed(random_seed)
     
     if product_path.endswith('.jsonl'):
